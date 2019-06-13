@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+/* grid, templating */
+#container {
+  display:grid;
+  grid-template-columns: repeat(17, auto [col-start] 1fr);
+  width: 90%;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* element box setup */
+.element {
+  height:5vw;
+  width:5vw;
+  padding: 2px;
+  border: 1px solid #222222;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.element_preview {
+  height: 10vw;
+  width: 10vw;
+  padding: 2px; 
+  border: 1px solid #222222;
+  border-collapse: hidden;
+  overflow: hidden;
+  grid-row: 3 / 5;
+  grid-column: 3 / 5;
+}
+
+/* grid-rows */
+.element-1, .element-2, .key { grid-row: 2; }
+.element-3, .element-4, .element-5, .element-6, .element-7, .element-8, .element-9, .element-10 { grid-row: 3; }
+.element-11, .element-12, .element-13, .element-14, .element-15, .element-16, .element-17, .element-18 { grid-row: 4; }
+.element-19, .element-20, .element-21, .element-22, .element-23, .element-24, .element-25, .element-26, .element-27, .element-28, .element-29, .element-30, .element-31, .element-32, .element-33, .element-34, .element-35, .element-36 { grid-row: 5; }
+.element-37, .element-38, .element-39, .element-40, .element-41, .element-42, .element-43, .element-44, .element-45, .element-46, .element-47, .element-48, .element-49, .element-50, .element-51, .element-52, .element-53, .element-54 { grid-row: 6; }
+.element-55, .element-56, .element-57, .element-72, .element-73, .element-74, .element-75, .element-76, .element-77, .element-78, .element-79, .element-80, .element-81, .element-82, .element-83, .element-84, .element-85, .element-86 { grid-row: 7; }
+.element-87, .element-88, .element-89, .element-104, .element-105, .element-106, .element-107, .element-108, .element-109, .element-110, .element-111, .element-112, .element-113, .element-114, .element-115, .element-116, .element-117, .element-118 { grid-row: 8; }
+.element-58, .element-59, .element-60, .element-61, .element-62, .element-63, .element-64, .element-65, .element-66, .element-67, .element-68, .element-69, .element-70, .element-71 { grid-row: 10; }
+.element-90, .element-91, .element-92, .element-93, .element-94, .element-95, .element-96, .element-97, .element-98, .element-99, .element-100, .element-101, .element-102, .element-103 { grid-row: 11; }
+
+/* grid-columns */
+.element-1, .element-3, .element-11, .element-19, .element-37, .element-55, .element-87 { grid-column: 1; }
+.element-4, .key, .element-12, .element-20, .element-38, .element-56, .element-88 { grid-column: 2; }
+.element-21, .element-39, .element-57, .element-58, .element-90 { grid-column: 3; }
+.element-22, .element-40, .element-59, .element-72, .element-91, .element-104 { grid-column: 4; }
+.element-23, .element-41, .element-60, .element-73, .element-92, .element-105 { grid-column: 5; }
+.element-24, .element-42, .element-61, .element-74, .element-93, .element-106 { grid-column: 6; }
+.element-25, .element-43, .element-62, .element-75, .element-94, .element-107 { grid-column: 7; }
+.element-26, .element-44, .element-63, .element-76, .element-95, .element-108 { grid-column: 8; }
+.element-27, .element-45, .element-64, .element-77, .element-96, .element-109 { grid-column: 9; }
+.element-28, .element-46, .element-65, .element-78, .element-97, .element-110 { grid-column: 10; }
+.element-29, .element-47, .element-66, .element-79, .element-98, .element-111 { grid-column: 11; }
+.element-30, .element-48, .element-67, .element-80, .element-99, .element-112 { grid-column: 12; } 
+.element-5, .element-13, .element-31, .element-49, .element-68, .element-81, .element-100, .element-113 { grid-column: 13; }
+.element-6, .element-14, .element-32, .element-50, .element-69, .element-82, .element-101, .element-114 { grid-column: 14; }
+.element-7, .element-15, .element-33, .element-51, .element-70, .element-83, .element-102, .element-115 { grid-column: 15; }
+.element-8, .element-16, .element-34, .element-52, .element-71, .element-84, .element-103, .element-116 { grid-column: 16; }
+.element-9, .element-17, .element-35, .element-53, .element-85, .element-117 { grid-column: 17; }
+.element-2, .element-10, .element-18, .element-36, .element-86, .element-118 { grid-column: 18; }
+
+.element__list { 
+  color: black;
+  font-size: 14px;
+}
+
+/* element colors */
+.element__actinoid { background-color: #ff4d4d; }
+
+.element__alkali_earth_metal{ background-color: #ffe066; }
+
+.element__alkali_metal { background-color: #ffa31a; }
+
+.element__lanthanoid { background-color: #cc0099; }
+
+.element__metalloid { background-color: #00cc99; }
+
+.element__noble_gas { background-color: #66c2ff; }
+
+.element__non_metal { background: #00e600; }
+
+.element__post-transition_metal { background-color: #99ffe6; }
+
+.element__transition_metal { background-color: #800080 }
+
+.element__unknown { background-color: #bfbfbf; }
+
+/* header */
+.header {
+  grid-row:1; 
+  width: 100%;
+  grid-column: 6 / 11;
+  font-size: 35px;
+}
+
+.info__symbol { 
+  font-size: 24px; 
+  font-weight: 900;
+}
+
+.name, .symbol, .weight {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 2px;
+  padding: 0;
+}
